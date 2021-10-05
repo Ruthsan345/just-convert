@@ -18,7 +18,7 @@ export default class extends Component {
             var b = this.state.fromvalue;
             var c = this.state.tovalue;
             var myNumber = baseConvert.converter(a).fromBase(b).toBase(c);
-            if (isNaN(myNumber)) { alert("Invalid Number Please enter a proper value") }
+            if (isNaN(myNumber)) { alert("Invalid Number!!. Please enter a proper value") }
             else { this.setState({ result: myNumber }) }
         }
 
@@ -39,7 +39,7 @@ export default class extends Component {
                         <Input keyboardType="numeric" placeholder='Enter a value' value={this.state.user} onChangeText={this.update} />
                         <Icon name='checkmark-circle' />
                     </Item>
-                    <Text style={styles.text1}>Converting To </Text>
+                    <Text style={styles.text1}>Converting To 🔢</Text>
                     <Picker style={styles.picker} selectedValue={this.state.tovalue} onValueChange={this.alterto}  >
                         <Picker.Item label="Binary" value="2" />
                         <Picker.Item label="Quinary" value="5" />
